@@ -6,14 +6,13 @@ import "./Portfolio.css";
 const projects = [
   {
     title: "Ton's AI Financial Management App",
-    video: "https://youtu.be/sgCwrGNKQSc",
+    video: "https://www.youtube.com/embed/sgCwrGNKQSc",
+    isYouTube: true,
     description:
-      "A mobile app using AI to analyze to help user reach financial plan based on expenses and earnings of user",
-    github: "https://github.com/tonnguyen123/ton-ai-finance-planner",
-    live: "",
-    status: "Partially Completed and In Development",
-    icons:["/icons/react-native.webp","/icons/python.png", "/icons/flask-icon.webp"],
-    features:["Completed function to extract data from Receipt's picture by using AI.", "Completed function to view total expense and earnings of user by month and year.", "Developing function to use AI to analyze the financial plan based on monthly income and expenses of the user.", "Developing feature to create notification for user if they spend over the allowed limit and alert if it affects to financial plan.", "Developing feature to make reminder by voice to text using AI to remind user of things to achieve their financial plan." ]
+      "A smart app that helps users track spending, income, goals, and alerts using voice, OCR, charts, and AI budget tips.",
+    stack: ["React Native", "Flask", "SQLite", "OpenAI", "Mindee OCR"],
+    repo: "https://github.com/tonquocviet/financial-planner-app",
+    demo: "https://www.youtube.com/watch?v=sgCwrGNKQSc",
   },
   {
     title: "Full Stack Ton's Project Tracker",
@@ -102,48 +101,70 @@ export default function Portfolio() {
           <h2>Completed Projects and In Progress Project</h2>
           <div className="projects-grid">
             {projects.map((project, index) => (
-              <motion.div
-                key={index}
-                className={`project-card ${hovered === index ? "hovered" : ""}`}
-                onMouseEnter={() => setHovered(index)}
-                onMouseLeave={() => setHovered(null)}
-                whileHover={{ scale: 1.03 }}
-              >
-                 <video
-                  className="project-video"
-                  src={project.video}
-                  controls
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  style={{ width: "100%", borderRadius: "12px" }}
-                />
-                <div className="project-content">
-                  <h3>{project.title}</h3>
-                  <p>Status: {project.status}</p>
-                  <h4>About</h4>
-                  <p>{project.description}</p>
-                  {
-                    project.features.map((feature,i)=>(
-                      <span>- {feature}</span>
-                    )
-                  )}
-                  <h4>Used Technology</h4>
-                  <div style={{ display: "flex", gap: "8px", marginBottom: "10px" }}>
-                    {project.icons && project.icons.map((icon, i) => (
-                      <img key={i} alt={i} src={icon} width="50" />
-                    ))}
-                  </div>
-                  <div className="links">
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-                    {project.live && (
-                      <a href={project.live} target="_blank" rel="noopener noreferrer">Live Demo</a>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+      <div key={index} className="project-card" style={{ marginBottom: "2rem" }}>
+        <h3 style={{ color: theme.textColor }}>{project.title}</h3>
+    
+        {project.isYouTube ? (
+          <iframe
+            className="project-video"
+            src={project.video}
+            title={project.title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{
+              width: "100%",
+              borderRadius: "12px",
+              aspectRatio: "16 / 9",
+              marginBottom: "1rem",
+            }}
+          />
+        ) : (
+          <video
+            className="project-video"
+            src={project.video}
+            controls
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            style={{
+              width: "100%",
+              borderRadius: "12px",
+              marginBottom: "1rem",
+            }}
+          />
+        )}
+    
+        <p style={{ color: theme.textColor }}>{project.description}</p>
+    
+        <ul style={{ paddingLeft: "1rem", color: theme.textColor }}>
+          {project.stack.map((tech, i) => (
+            <li key={i}>{tech}</li>
+          ))}
+        </ul>
+    
+        <div style={{ marginTop: "1rem" }}>
+          <a
+            href={project.repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ marginRight: "1rem", color: theme.textColor }}
+          >
+            GitHub
+          </a>
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: theme.textColor }}
+          >
+            Demo
+      </a>
+    </div>
+  </div>
+))}
+
           </div>
         </div>
       </section>
