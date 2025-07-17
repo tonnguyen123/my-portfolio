@@ -15,29 +15,37 @@ const projects = [
   },
   {
     title: "Full Stack Ton's Project Tracker",
-    video: "/gifs/Project-Tracker.mp4",
-    description: "A full-stack web app to track tasks, deadlines, and with team management with features:",
-    github: "https://github.com/tonnguyen123/Full-Stack-Project-Tracker",
-    live: "https://full-stack-ton-project-trackers.netlify.app/",
+    video:"/gifs/Project-Tracker.mp4",
+    description:"A full-stack web app to track tasks, deadlines, and with team management with features: ",
+    github:"https://github.com/tonnguyen123/Full-Stack-Project-Tracker",
+    live:"https://full-stack-ton-project-trackers.netlify.app/",
     status: "Completed",
-    icons: [
-      "/icons/react.svg",
-      "/icons/typescript.svg",
-      "/icons/css-3.png",
-      "/icons/c-sharp.png",
-      "/icons/mysql.png",
-      "/icons/docker-icon.png",
-    ],
-    features: [
-      "Create user account and restore with email verification",
-      "Create project and team with deadline and tasks",
-      "Add, update, remove and assign tasks",
-      "Calendar integration",
-      "Graph and task visualization",
-      "Internal messaging & email forwarding",
-    ],
+    icons: ["/icons/react.svg", "/icons/typescript.svg","/icons/css-3.png","/icons/c-sharp.png","/icons/mysql.png","/icons/docker-icon.png"],
+    features: ["Create user account and account restore with email verfication", "Create project and team with deadline and tasks",
+      "Add, update, remove and assign tasks to user", "Add, move tasks to dates on Calendar", "View graph and diagram of completion percentage of tasks and projects","Send messages between team members and email forwarded to Yahoo mail, Outlook mail or Gmail"]
   },
-  // Add others below if needed...
+  {
+    title: "Full Stack Ton's Demo Store",
+    video: "/gifs/final-store.mp4 ",
+    description:
+      "This web app is demo of store for the owner to manage customer base and item inventory and demo of POS system:",
+    github: "https://github.com/tonnguyen123/Full-Stack-Store",
+    live: "https://ton-store.netlify.app",
+    status: "Completed",
+    icons: ["/icons/react.svg","/icons/js.png", "/icons/css-3.png", "/icons/nodejs.png", "/icons/mongodb.svg"],
+    features: ["Search item, customer, address with autocomplete function", "Add, edit, remove information of items and customers","Demo of processing payment for or editing or updating items added in cart.", "View, download receipts from purchase history of customers.","Built in email function to send messages and files to customers."]
+  },
+  {
+    title:"Student Organizer",
+    video:"/gifs/Study-manager.mp4",
+    description:"This app is to help student to manage courses, class schedule and gpa planner:",
+    github: "https://github.com/tonnguyen123/Study-Manager",
+    live:"",
+    status: "Completed",
+    icons:["/icons/java.svg", "/icons/HSQLDB.webp","/icons/android-studio.png"],
+    features: ["Create class schedule by providing which week days and time are class time.", "Create, edit and delete notes","Calculate how much grades need to be achieved to get deisred final grade of the course","Email function by using Gmail to email professor and classmates"]
+  }
+   
 ];
 
 export default function Portfolio() {
