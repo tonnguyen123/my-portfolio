@@ -178,12 +178,12 @@ export default function Portfolio() {
 
                 <div className="links">
                   {project.github && (
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" style ={{marginRight: "1rem"}}>
                       GitHub
                     </a>
                   )}
                   {project.live && (
-                    <a href={project.live} target="_blank" rel="noopener noreferrer">
+                    <a href={project.live} target="_blank" rel="noopener noreferrer" style ={{marginRight: "1rem"}}>
                       Live Demo
                     </a>
                   )}
