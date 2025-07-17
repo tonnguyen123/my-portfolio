@@ -5,7 +5,7 @@ import "./Portfolio.css";
 const projects = [
   {
     title: "Ton's AI Financial Management App",
-    video: "https://youtu.be/sgCwrGNKQSc",
+    video: "https://www.youtube.com/embed/sgCwrGNKQSc",
     description:
       "A mobile app using AI to analyze to help user reach financial plan based on expenses and earnings of user",
     github: "https://github.com/tonnguyen123/ton-ai-finance-planner",
