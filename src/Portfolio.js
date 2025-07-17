@@ -5,13 +5,14 @@ import "./Portfolio.css";
 const projects = [
   {
     title: "Ton's AI Financial Management App",
-    video: "https://www.youtube.com/embed/sgCwrGNKQSc",
-    isYouTube: true,
+    video: "https://youtu.be/sgCwrGNKQSc",
     description:
-      "A smart app that helps users track spending, income, goals, and alerts using voice, OCR, charts, and AI budget tips.",
-    stack: ["React Native", "Flask", "SQLite", "OpenAI", "Mindee OCR"],
-    repo: "https://github.com/tonquocviet/financial-planner-app",
-    demo: "https://www.youtube.com/watch?v=sgCwrGNKQSc",
+      "A mobile app using AI to analyze to help user reach financial plan based on expenses and earnings of user",
+    github: "https://github.com/tonnguyen123/ton-ai-finance-planner",
+    live: "",
+    status: "Partially Completed and In Development",
+    icons:["/icons/react-native.webp","/icons/python.png", "/icons/flask-icon.webp"],
+    features:["Completed function to extract data from Receipt's picture by using AI.", "Completed function to view total expense and earnings of user by month and year.", "Developing function to use AI to analyze the financial plan based on monthly income and expenses of the user.", "Developing feature to create notification for user if they spend over the allowed limit and alert if it affects to financial plan.", "Developing feature to make reminder by voice to text using AI to remind user of things to achieve their financial plan." ]
   },
   {
     title: "Full Stack Ton's Project Tracker",
