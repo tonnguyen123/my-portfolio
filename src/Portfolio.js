@@ -18,7 +18,8 @@ const projects = [
   },
   {
     title: "Full Stack Ton's Project Tracker",
-    video:"https://www.youtube.com/embed/IrJQLZUQ07A",
+    video: "https://www.youtube.com/embed/IrJQLZUQ07A",
+    isYouTube: true,
     description:"A full-stack web app to track tasks, deadlines, and with team management with features: ",
     github:"https://github.com/tonnguyen123/Full-Stack-Project-Tracker",
     live:"https://full-stack-ton-project-trackers.netlify.app/",
@@ -29,7 +30,8 @@ const projects = [
   },
   {
     title: "Full Stack Ton's Demo Store",
-    video: "https://www.youtube.com/embed/oC0GZBhVd90 ",
+    video: "https://www.youtube.com/embed/oC0GZBhVd90",
+    isYouTube: true,
     description:
       "This web app is demo of store for the owner to manage customer base and item inventory and demo of POS system:",
     github: "https://github.com/tonnguyen123/Full-Stack-Store",
