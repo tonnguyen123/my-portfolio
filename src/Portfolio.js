@@ -30,7 +30,7 @@ const projects = [
   },
   {
     title: "Full Stack Ton's Demo Store",
-    video: "https://www.youtube.com/embed/oC0GZBhVd90",
+    video: "https://www.youtube.com/embed/wF8TuIwjvwA",
     isYouTube: true,
     description:
       "This web app is demo of store for the owner to manage customer base and item inventory and demo of POS system:",
