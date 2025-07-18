@@ -42,7 +42,8 @@ const projects = [
   },
   {
     title:"Student Organizer",
-    video:"/gifs/Study-manager.mp4",
+    video: "https://www.youtube.com/embed/Gtj1fL2XPpg",
+    isYouTube: true,
     description:"This app is to help student to manage courses, class schedule and gpa planner:",
     github: "https://github.com/tonnguyen123/Study-Manager",
     live:"",
