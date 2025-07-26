@@ -13,7 +13,7 @@ const projects = [
     live: "",
     status: "Partially Completed and In Development",
     icons:["/icons/react-native.webp","/icons/python.png", "/icons/flask-icon.webp"],
-    features:["Completed function to extract data from Receipt's picture by using AI.", "Completed function to view total expense and earnings in form of charts of user by month and year.", "Developed feature to use AI to analyze the financial plan based on monthly income and expenses of the user.", "Developed feature create goal for saving in set preiod of timne.", "Developed options to change theme of the app and set password for the app to ensure security.", "Developed AI-powered chat bot to answer financial questions realted to the current financial situation of the user." ],
+    features:["Completed function to extract data from Receipt's picture by using AI.", "Completed function to view total expense and earnings of user in form of charts by month and year.", "Developed feature to use AI to analyze the financial plan based on monthly income and expenses of the user.", "Developed feature create goal for saving in set preiod of timne.", "Developed options to change theme of the app and set password for the app to ensure security.", "Developed AI-powered chat bot to answer financial questions realted to the current financial situation of the user." ],
     demo: "https://www.youtube.com/watch?v=sgCwrGNKQSc",
   },
   {
