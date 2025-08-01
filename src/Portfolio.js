@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Portfolio.css";
 
@@ -71,6 +71,22 @@ const AnimatedBackground = () => {
 export default function Portfolio() {
   const [hovered, setHovered] = useState(null);
 
+
+  const [showTopButton, setShowTopButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowTopButton(window.pageYOffset > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   // Replace this URL with your actual resume URL on GitHub
   const resumeUrl = "https://github.com/tonnguyen123/my-portfolio/blob/main/public/TonNguyen_Resume.pdf"; 
   const linkedInUrl = "https://www.linkedin.com/in/tomn-nguyen/";
@@ -91,12 +107,21 @@ export default function Portfolio() {
     }
   };
 
+
+  const handleWorkClick = () => {
+    const projectSection = document.getElementById("work-exp");
+    if (projectSection) {
+      projectSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   // Inline styles for button icons
   const buttonIconStyle = {
     width: '20px',
     height: '20px',
     marginRight: '8px',
     filter: 'brightness(0) invert(1)', // Makes icons white to match button text
+    color: 'black'
   };
 
   const buttonStyle = {
@@ -109,13 +134,8 @@ export default function Portfolio() {
     <div className="portfolio">
       <AnimatedBackground />
 
-      <header className="portfolio-header glass-card">
-        <h1>Ton Nguyen</h1>
-        <p>
-          Full-Stack & Mobile App Developer | React, Java, JavaScript, TypeScript, C#, .NET, Python, Flask | MongoDB, MySQL, NoSQL, SQLite,
-          HSQLDB | Hosting: Netlify, Render, AWS
-        </p>
-        <div className="button-container">
+      <header className="portfolio-header">
+        <div className="button-container top-buttons">
           <button className="glass-button" onClick={handleContactClick} style={buttonStyle}>
             <img src="/icons/email.png" alt="" style={buttonIconStyle} />
             CONTACT
@@ -127,6 +147,15 @@ export default function Portfolio() {
           >
             <img src="/icons/resume_4822907.png" alt="" style={buttonIconStyle} />
             RESUME
+          </button>
+
+          <button 
+            onClick={handleWorkClick} 
+            className="glass-button"
+            style={buttonStyle}
+          >
+            <img src="/icons/work.png" alt="" style={buttonIconStyle}  onClick={handleWorkClick}/>
+            WORK EXPERIENCE
           </button>
           <a 
             href={linkedInUrl} 
@@ -153,7 +182,19 @@ export default function Portfolio() {
             PROJECTS
           </button>
         </div>
+        <div>
+          
+          <h1 style={{padding:'20px'}}>Ton Nguyen</h1>
+        <p>
+          Full-Stack & Mobile App Developer | React, Java, JavaScript, TypeScript, C#, .NET, Python, Flask | MongoDB, MySQL, NoSQL, SQLite,
+          HSQLDB | Hosting: Netlify, Render, AWS
+        </p>
+
+        </div>
+
+        
       </header>
+
 
       <section className="portfolio-section">
         <div className="glass-card">
@@ -264,6 +305,40 @@ export default function Portfolio() {
         </div>
       </section>
 
+      <section className="portfolio-section" id="work-exp">
+        <div className="glass-card">
+          <h1 className="section-title">Work Experience</h1>
+          <h3>
+            AI Code Trainer at DataAnnotation
+          </h3>
+          <p className="section-content">
+            
+          </p>
+          <p className="section-content">
+          - Designed and solved diverse coding problems to train and fine-tune AI models, primarily using Python.
+          </p>
+          <p className="section-content">
+          - Authored clear, high-quality code snippets with detailed explanations across algorithms, data structures, and real-world scenarios.
+          </p>
+
+          <p className="section-content">
+          -Labeled AI-generated code for correctness, efficiency, and clarity—identifying strong vs. weak solutions and edge case failures.
+          </p>
+
+          <p className="section-content">
+          - Provided detailed feedback on AI-generated code to help refine model behavior and boost accuracy in real-world coding tasks.
+
+          </p>
+          <p className="section-content">
+          - Evaluated and improved AI code output through white-box and black-box testing, enhancing runtime performance by ~20%.
+          </p>
+          <p>
+            Labeled 
+          </p>
+          
+        </div>
+      </section>
+
       <section className="portfolio-section" id="contact">
         <div className="glass-card contact-section">
           <h2 className="section-title">Contact</h2>
@@ -274,6 +349,13 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
+
+
+      {showTopButton && (
+        <button className="scroll-to-top" onClick={scrollToTop}>
+          ↑ Top
+        </button>
+      )}
     </div>
   );
 }
