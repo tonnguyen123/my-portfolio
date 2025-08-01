@@ -202,20 +202,17 @@
 }
 
 .button-container.top-buttons {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-
-  padding: 10px 20px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  border: none;
+  backdrop-filter: blur(10px);
  
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
 }
 
 /* Section Styles */
