@@ -332,10 +332,7 @@ export default function Portfolio() {
           <p className="section-content">
           - Evaluated and improved AI code output through white-box and black-box testing, enhancing runtime performance by ~20%.
           </p>
-          <p>
-            Labeled 
-          </p>
-          
+        
         </div>
       </section>
 
