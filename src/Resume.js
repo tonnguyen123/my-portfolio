@@ -66,14 +66,14 @@ const Resume = () => {
       {error && (
         <div className="pdf-fallback">
           <object
-            data="/TonNguyen_Resume.pdf"
+            data="/Ton Nguyen-Resume.pdf"
             type="application/pdf"
             width="100%"
             height="600px"
           >
             <p>
               Your browser doesn't support PDF viewing. 
-              <a href="/TonNguyen_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/Ton Nguyen-Resume.pdf" target="_blank" rel="noopener noreferrer">
                 Click here to download the PDF
               </a>
             </p>
