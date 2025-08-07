@@ -16,8 +16,8 @@ const Resume = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/TonNguyen_Resume.pdf';
-    link.download = 'TonNguyen_Resume.pdf';
+    link.href = '/Ton Nguyen-Resume.pdf';
+    link.download = 'Ton Nguyen-Resume.pdf';
     link.click();
   };
 
